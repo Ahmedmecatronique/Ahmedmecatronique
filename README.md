@@ -16,6 +16,10 @@ Firmware de vol temps réel STM32 (C/C++), protocole UART custom vers Raspberry 
 
 Pile ROS 2 Humble (10 nœuds), IK analytique à 8 configurations avec repli Levenberg-Marquardt, trajectoires quintiques 100 Hz, firmware STM32 FreeRTOS + micro-ROS (PID 1 kHz, génération de pas 20 kHz), IHM jumeau numérique 3D PySide6/OpenGL, calibration main-œil, 54 tests unitaires.
 
+**[Contrôleur de vol quadricoptère STM32F103](https://github.com/Ahmedmecatronique/firmware_drone_manuel_stm32f103c8t6)** – firmware en C, entièrement en virgule fixe (Cortex-M3 sans FPU)
+
+Boucles de contrôle à 3 kHz, PID en cascade angle → vitesse, filtre de Mahony en quaternion (Q2.30), MPU-9250 par DMA, ESC OneShot125 / PWM, autotests au démarrage, télécommande ESP32 (NRF24L01), tableau de bord web temps réel (Python, WebSocket). Firmware vérifié en émulateur Cortex-M3 ; essais sur carte et en vol à venir.
+
 ## Expérience récente
 
 Stagiaire R&D drones chez TECHNOZOR (2026) – conception d'une carte de contrôle de vol STM32 custom, validée en vol.
@@ -46,6 +50,7 @@ Embedded systems, drones, robotics: from mechanical design and electronic boards
 
 - **[AquaWing](https://github.com/Ahmedmecatronique/AquaWing)** – autonomous VTOL sea-rescue drone (one-year CDIO project). Real-time STM32 flight firmware (C/C++), custom UART protocol to a Raspberry Pi, GPS waypoint navigation, automatic buoy drop, AI victim detection (YOLO, OpenCV, RGB + thermal fusion), FastAPI/WebSocket ground station.
 - **[6-DOF robotic arm](https://github.com/Ahmedmecatronique/robot-6-axe-ros)** – personal project. ROS 2 Humble stack (10 nodes), analytical IK with 8 configurations and Levenberg-Marquardt fallback, 100 Hz quintic trajectories, STM32 FreeRTOS + micro-ROS firmware (1 kHz PID, 20 kHz step generation), 3D digital-twin HMI (PySide6/OpenGL), hand-eye calibration, 54 unit tests.
+- **[STM32F103 quadcopter flight controller](https://github.com/Ahmedmecatronique/firmware_drone_manuel_stm32f103c8t6)** – C firmware, fully fixed-point (Cortex-M3, no FPU). 3 kHz control loops, cascaded angle → rate PID, quaternion Mahony filter (Q2.30), MPU-9250 over DMA, OneShot125 / PWM ESC output, power-on self-tests, ESP32 remote (NRF24L01), real-time web dashboard (Python, WebSocket). Verified in a Cortex-M3 emulator; board and flight tests still to come.
 
 **Recent experience:** Drone R&D intern at TECHNOZOR (2026) – designed a custom STM32 flight-controller board, flight-validated.
 
