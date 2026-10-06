@@ -18,7 +18,7 @@ Pile ROS 2 Humble (10 nœuds), IK analytique à 8 configurations avec repli Leve
 
 **[Contrôleur de vol quadricoptère STM32F103](https://github.com/Ahmedmecatronique/firmware_drone_manuel_stm32f103c8t6)** – firmware en C, entièrement en virgule fixe (Cortex-M3 sans FPU)
 
-Boucles de contrôle à 3 kHz, PID en cascade angle → vitesse, filtre de Mahony en quaternion (Q2.30), MPU-9250 par DMA, ESC OneShot125 / PWM, autotests au démarrage, télécommande ESP32 (NRF24L01), tableau de bord web temps réel (Python, WebSocket). Firmware vérifié en émulateur Cortex-M3 ; essais sur carte et en vol à venir.
+Boucles de contrôle à 3 kHz, PID en cascade angle → vitesse, filtre de Mahony en quaternion (Q2.30), MPU-9250 par DMA, ESC OneShot125 / PWM, autotests au démarrage, télécommande ESP32 (NRF24L01), tableau de bord web temps réel (Python, WebSocket). Firmware vérifié en émulateur Cortex-M3 ; essais sur carte et en vol vérifier avec succès .
 
 ## Expérience récente
 
